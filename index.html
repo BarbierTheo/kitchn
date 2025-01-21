@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kitch'n</title>
     <!-- npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwindstyle.css --watch -->
-     <link rel="stylesheet" href="./assets/css/tailwindstyle.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/tailwindstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-    <h1 class="text-8xl">oui</h1>
+
+<body class="bg-white min-h-[100vh]">
+
+    <div class="navbar bg-slate-50 flex justify-between shadow-lg text-slate-700 max-w-[1400px] m-auto lg:rounded-full">
+        <div class="flex">
+            <a class="text-xl ml-4 font-semibold" href="./index.html">kitch'n</a>
+        </div>
+        <div class="flex gap-2">
+            <input type="text" placeholder="Saisissez un aliment" class="input w-[15rem] bg-slate-200" />
+            <button class="btn btn-square btn-ghost">
+                <i class='bx bx-search text-2xl'></i>
+            </button>
+        </div>
+    </div>
+
+<div class="flex flex-col lg:flex-row max-w-[1400px] m-auto">
+
+    <div class="skeleton w-96 h-96 self-center m-8"></div>
+
+    <div class="flex flex-col m-8 text-slate-700">
+        <p class="text-2xl"><span class="font-bold">Nom du produit</span> - Marque - <span class="font-light italic">Poids</span></p>
+        <p>Code barre : 456165168</p>
+        <p><span class="font-semibold">Dénomination générique :</span> Biscuit au sésame</p>
+        <p><span class="font-semibold">Catégories :</span> greezbrziuauire, erzugezuez, ezobgezoez</p>
+    </div>
+    <div class="flex m-8">
+      <div>
+        nutriscore
+      </div>
+    </div>
+    
+    
+    
+    
+</div>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

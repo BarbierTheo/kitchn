@@ -3,9 +3,25 @@
 let params = new URLSearchParams(document.location.search);
 let id = params.get("id")
 
-
-
-fetch(`https://world.openfoodfacts.org/api/v3/product/${id}.json`)
+if (id==null){
+document.getElementById('hero').innerHTML = `<div class="lg:w-3/12 w-96 self-center">
+            <img src="./assets/img/cozy-kitchen-interior-sweet-home-card-cosy-dining-table-with-cup-coffee-machine-fir-branch-winter-window-hygge-scandinavian-comfy-house-modern-trendy-apartment-flat-vector-illustration_198278-22579.avif"
+                alt="" class="">
+        </div>
+        <div class="flex flex-col self-center w-10/12 lg:w-4/12 gap-6 text-center lg:text-left">
+            <h1 class="text-slate-900 text-3xl font-semibold ">Mieux choisir, c'est déjà mieux manger</h1>
+            <p class="text-slate-700">Envie de savoir ce que contiennent vraiment vos aliments ? Notre application vous
+                permet de scanner facilement le code-barres de vos produits alimentaires et d'obtenir des informations
+                claires et précises sur leur composition. Faites des choix éclairés pour une alimentation plus saine !
+            </p>
+            <form action="" class="self-center">
+                <input type="text" name="id" placeholder="ex. Carotte" class="input bg-amber-100 lg:w-96" />
+                <button class="py-3 px-4 bg-amber-400 rounded-lg"><i
+                        class='bx bxs-search text-amber-50 text-xl'></i></button>
+            </form>
+        </div>`
+} else {
+    fetch(`https://world.openfoodfacts.org/api/v3/product/${id}.json`)
     .then((response) => response.json())
     .then(data => {
         // console.log(data)
@@ -79,10 +95,6 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${id}.json`)
         }
 
 
-
-
-
-
         document.getElementById('interface').innerHTML = `
             <div class="self-center m-8"><img src="${data.product.image_front_url}" alt="${data.product.product_name_fr} ${data.product.brands}" class="min-w-96"></div>
             <div class="flex lg:flex-row flex-col justify-center lg:justify-between m-8 gap-8 xl:w-full">
@@ -105,13 +117,5 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${id}.json`)
                 </div>
             </div>
     `
-
-
-
-
-
-
-
-
-
     })
+}

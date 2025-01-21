@@ -56,19 +56,19 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${id}.json`)
         if (data.product.nova_group == 1) {
             nova = `<div class="flex self-center">
                     <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-4 px-6 bg-[#00aa00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
+                            class="ml-2 py-2 px-4 bg-[#00aa00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
                 </div>`
         }
         if (data.product.nova_group == 2) {
             nova = `<div class="flex self-center">
                     <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-4 px-6 bg-[#ffcc00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
+                            class="ml-2 py-2 px-4 bg-[#ffcc00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
                 </div>`
         }
         if (data.product.nova_group == 3) {
             nova = `<div class="flex self-center">
                     <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-4 px-6 bg-[#ff6600] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
+                            class="ml-2 py-2 px-4 bg-[#ff6600] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
                 </div>`
         }
         if (data.product.nova_group == 4) {

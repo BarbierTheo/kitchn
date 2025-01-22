@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitch'n</title>
+    <title>kitch'n</title>
     <!-- npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwindstyle.css --watch -->
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/tailwindstyle.css">
@@ -12,7 +12,6 @@
 </head>
 
 <body class="bg-white min-h-[100vh]">
-
     <div
         class="navbar bg-slate-50 flex shadow-lg text-slate-700 m-auto flex-col lg:flex-row gap-2 lg:gap-16 justify-center">
         <div class="flex">
@@ -31,8 +30,24 @@
     <p class="text-center my-4">ID d'essais : <a href="?id=3017620425035">3017620425035</a>, <a
             href="?id=3166352968591">3166352968591</a>, <a href="?id=3387390019995">3387390019995</a></p>
 
+    <section>
+        <div>
+            <a class="button" id="startButton">Start</a>
+            <a class="button" id="resetButton">Reset</a>
+        </div>
+        <div>
+            <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+        </div>
+        <div id="sourceSelectPanel" style="display:none">
+            <label for="sourceSelect">Change video source:</label>
+            <select id="sourceSelect" style="max-width:400px">
+            </select>
+        </div>
+        <label>Result:</label>
+        <pre><code id="result"></code></pre>
+    </section>
 
-    <div class="flex lg:flex-row flex-col lg:min-w-[1400px] m-auto justify-center gap-2 mb-24" id="hero">
+    <div class="flex lg:flex-row flex-col lg:min-w-[1400px] m-auto justify-center gap-2" id="hero">
 
         <!-- <div class="lg:w-3/12 w-96 self-center">
             <img src="./assets/img/cozy-kitchen-interior-sweet-home-card-cosy-dining-table-with-cup-coffee-machine-fir-branch-winter-window-hygge-scandinavian-comfy-house-modern-trendy-apartment-flat-vector-illustration_198278-22579.avif"
@@ -54,7 +69,7 @@
     </div>
 
 
-    <div class="flex flex-col xl:flex-row max-w-[1400px] m-auto justify-between lg:mt-14" id="interface">
+    <div class="flex flex-col xl:flex-row max-w-[1400px] m-auto justify-between" id="interface">
 
         <!-- <div class="skeleton w-96 h-96 self-center m-8"></div>
 
@@ -95,7 +110,7 @@
     </div>
 
     <script src="./assets/js/script.js"></script>
-    
+
     <script src="./assets/js/heroscript.js"></script>
 </body>
 

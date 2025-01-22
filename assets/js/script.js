@@ -43,55 +43,33 @@ document.getElementById('hero').innerHTML = `<div class="lg:w-3/12 w-96 self-cen
 
         // NUTRISCORE
         if (data.product.nutriscore_grade == "a") {
-            nutriscore = `<div class="flex py-3 px-6 self-center bg-[#00823f] text-slate-50 font-bold text-xl rounded-full shadow-sm capitalize">
-                        NUTRISCORE : ${data.product.nutriscore_grade}
-                    </div>`
+            nutriscore = `<img src="./assets/img/Nutriscore/A.svg" alt="" class="w-32 self-center">`
         }
         if (data.product.nutriscore_grade == "b") {
-            nutriscore = `<div class="flex py-3 px-6 self-center bg-[#86bc2b] text-slate-50 font-bold text-xl rounded-full shadow-sm capitalize">
-                        NUTRISCORE : ${data.product.nutriscore_grade}
-                    </div>`
+            nutriscore = `<img src="./assets/img/Nutriscore/B.svg" alt="" class="w-32 self-center">`
         }
         if (data.product.nutriscore_grade == "c") {
-            nutriscore = `<div class="flex py-3 px-6 self-center bg-[#fecc00] text-white font-bold text-xl rounded-full shadow-sm capitalize">
-                        NUTRISCORE : ${data.product.nutriscore_grade}
-                    </div>`
+            nutriscore = `<img src="./assets/img/Nutriscore/C.svg" alt="" class="w-32 self-center">`
         }
         if (data.product.nutriscore_grade == "d") {
-            nutriscore = `<div class="flex py-3 px-6 self-center bg-[#ef8200] text-slate-50 font-bold text-xl rounded-full shadow-sm capitalize">
-                        NUTRISCORE : ${data.product.nutriscore_grade}
-                    </div>`
+             nutriscore = `<img src="./assets/img/Nutriscore/D.svg" alt="" class="w-32 self-center">`
         }
         if (data.product.nutriscore_grade == "e") {
-            nutriscore = `<div class="flex py-3 px-6 self-center bg-[#e73c08] text-slate-50 font-bold text-xl rounded-full shadow-sm capitalize">
-                        NUTRISCORE : ${data.product.nutriscore_grade}
-                    </div>`
+            nutriscore = `<img src="./assets/img/Nutriscore/E.svg" alt="" class="w-32 self-center">`
         }
 
         // NOVA
         if (data.product.nova_group == 1) {
-            nova = `<div class="flex self-center">
-                    <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-2 px-4 bg-[#00aa00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
-                </div>`
+            nova = `<img src="./assets/img/Novascore/Nova1.svg" alt="" class="h-32 self-center">`
         }
         if (data.product.nova_group == 2) {
-            nova = `<div class="flex self-center">
-                    <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-2 px-4 bg-[#ffcc00] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
-                </div>`
+            nova = `<img src="./assets/img/Novascore/Nova2.svg" alt="" class="h-32 self-center">`
         }
         if (data.product.nova_group == 3) {
-            nova = `<div class="flex self-center">
-                    <p class="text-slate-800 font-bold text-2xl py-4 px-10">NOVA : <span
-                            class="ml-2 py-2 px-4 bg-[#ff6600] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
-                </div>`
+            nova = `<img src="./assets/img/Novascore/Nova3.svg" alt="" class="h-32 self-center">`
         }
         if (data.product.nova_group == 4) {
-            nova = `<div class="flex self-center">
-                    <p class="text-slate-800 font-bold text-2xl self-center">NOVA : <span
-                            class="ml-2 py-2 px-4 bg-[#ff0000] text-slate-50 rounded-xl">${data.product.nova_group}</span></p>
-                </div>`
+            nova = `<img src="./assets/img/Novascore/Nova4.svg" alt="" class="h-32 self-center">`
         }
 
 
@@ -111,7 +89,7 @@ document.getElementById('hero').innerHTML = `<div class="lg:w-3/12 w-96 self-cen
                     ${allergens_imported}
                     </div>
                 </div>
-                <div class="flex flex-col gap-4 lg:my-4 self-center lg:self-start min-w-64">
+                <div class="flex flex-row lg:flex-col gap-4 lg:my-4 self-center lg:self-start min-w-64">
                     ${nutriscore}
                     ${nova}
                 </div>
